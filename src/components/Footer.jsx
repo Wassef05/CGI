@@ -1,6 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import logo from "../img/footerlogo.png";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <div className="w-full">
       <div className="bg-[#176A82] py-8">
@@ -12,13 +15,13 @@ export default function Footer() {
             <div className="flex items-center justify-center md:justify-start">
               <ul className="text-white text-center md:text-left">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    A Propos De Nous
+                  <a href="#a-propos" className="hover:underline">
+                    {t('footer.aboutUs')}
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Contact
+                  <a href="#contact" className="hover:underline">
+                    {t('footer.contact')}
                   </a>
                 </li>
               </ul>
@@ -27,44 +30,44 @@ export default function Footer() {
               <ul className="text-white text-center md:text-left">
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
-                    COGEB
+                    {t('footer.cogeb')}
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
-                    AL-BARKA
+                    {t('footer.alBarka')}
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
-                    SOPRODI
+                    {t('footer.soprodi')}
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
-                    COGEB INTERNATIONNAL
+                    {t('footer.cogebInternational')}
                   </a>
                 </li>
               </ul>
             </div>
             <div className="flex flex-col items-center justify-center md:items-start">
               <h2 className="mb-6 text-sm font-semibold text-white uppercase">
-                Download
+                {t('footer.contactTitle')}
               </h2>
               <ul className="text-white text-center md:text-left">
                 <li className="mb-4">
                   <a href="mailto:cogebimmobiliere@gmail.com" className="hover:underline">
-                    cogebimmobiliere@gmail.com
+                    {t('footer.email')}
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="tel:+21673323435" className="hover:underline">
-                    +216 73 323 435
+                    {t('footer.phone')}
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
-                    Avenue de l environnement, Sousse, Tunisia, 4000
+                    {t('footer.address')}
                   </a>
                 </li>
               </ul>
@@ -75,10 +78,10 @@ export default function Footer() {
       <div className="bg-[#145c6b] py-4">
         <div className="text-center text-white">
           <p className="text-sm">
-            © {new Date().getFullYear()} . All rights reserved.
+            © {new Date().getFullYear()} . {t('footer.rightsReserved')}
           </p>
           <p className="text-xs">
-            Developed by SilverLine Solution
+            {t('footer.developedBy')}
           </p>
         </div>
       </div>

@@ -1,0 +1,50 @@
+{
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "apropos": {
+        "title": "about us",
+        "paragraph1": "COGEB International CGI is a limited liability company, entirely export-oriented and non-resident, established in 2002 in accordance with Law No. 94-42 of 07/03/1994, as amended and supplemented by Law No. 96-59 of 06/07/1996 and Law No. 98-102 of 30/11/1998.",
+        "paragraph2": "With a capital of 250,000 dinars, COGEB International specializes in international trade, including the export and import of goods and products, as well as all types of international trading and brokerage operations."
+      },
+
+
+      "contact": {
+    "title": "contact",
+    "form": {
+      "name": "Name and surname",
+      "email": "Email",
+      "phone": "Phone",
+      "project": "Project",
+      "message": "Message",
+      "send": "Send"
+    },
+    "info": {
+      "email": "cogebimmobiliere@gmail.com",
+      "phone": "+216 73 323 435",
+      "address": "Avenue of the environment, Sousse, <br/>Tunisia, 4000"
+    }
+  },
+
+  
+    "footer": {
+      "aboutUs": "About Us",
+      "contact": "Contact",
+      "cogeb": "COGEB",
+      "alBarka": "AL-BARKA",
+      "soprodi": "SOPRODI",
+      "cogebInternational": "COGEB INTERNATIONAL",
+      "contactTitle": "CONTACT",
+      "email": "cogebimmobiliere@gmail.com",
+      "phone": "+216 73 323 435",
+      "address": "Avenue of the environment, Sousse,Tunisia, 4000",
+      "rightsReserved": "All rights reserved.",
+      "developedBy": "Developed by SilverLine Solution"
+    }
+  
+  
+  }
+ 
+  

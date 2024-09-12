@@ -2,31 +2,32 @@ import cov from "../img/contactcov.png";
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
   const form = useRef();
+  const { t } = useTranslation(); // Use the translation hook
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
         publicKey: 'YOUR_PUBLIC_KEY',
       })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
+      .then(() => {
+        console.log('SUCCESS!');
+      })
+      .catch((error) => {
+        console.log('FAILED...', error.text);
+      });
   };
 
   return (
-    <div>
+    <div id="contact">
         <h1 className="uppercase pt-16 pl-16 font-averia font-bold text-5xl text-[#A95834]">
-          contact
+          
+          {t('contact.title')}
+
         </h1> 
       <div className="relative mt-16 w-full  sm:h-[100vh] bg-white">
         <div
@@ -42,7 +43,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h1>cogebimmobiliere@gmail.com</h1>
+                    <h1>{t('contact.info.email')}</h1>
                   </div>
                 </div>
                 <div className="flex p-2 text-white ">
@@ -52,7 +53,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h1>c+216 73 323 435</h1>
+                    <h1>{t('contact.info.phone')}</h1>
                   </div>
                 </div>
                 <div className="flex p-2 text-white ">
@@ -64,8 +65,7 @@ export default function Contact() {
 
                   </div>
                   <div>
-                    <h1>Avenue de l’environnement, Sousse, <br/>
-                    Tunisia, 4000</h1>
+                  <h1 dangerouslySetInnerHTML={{ __html: t('contact.info.address') }}></h1>
                   </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@ export default function Contact() {
                     
                     className="block mb-2 text-sm font-medium text-gray-900 "
                   >
-                    NOM ET PRENOM
+                    {t('contact.form.name')}
                   </label>
                   <input
                     type="text"
@@ -91,7 +91,7 @@ export default function Contact() {
                     
                     className="block mb-2 text-sm font-medium text-gray-900 "
                   >
-                    EMAIL
+                    {t('contact.form.email')}
                   </label>
                   <input
                     type="text"
@@ -107,7 +107,8 @@ export default function Contact() {
                     
                     className="block mb-2 text-sm font-medium text-gray-900 "
                   >
-                    TELEPHONE
+                                        {t('contact.form.phone')}
+
                   </label>
                   <input
                     type="text"
@@ -121,7 +122,8 @@ export default function Contact() {
                     
                     className="block mb-2 text-sm font-medium text-gray-900 "
                   >
-                    PROJET
+                                        {t('contact.form.project')}
+
                   </label>
                   <input
                     type="text"
@@ -143,7 +145,8 @@ export default function Contact() {
                 
                 className="text-white bg-[#176A82BD] hover:bg-blue-600 tracking-wide rounded-md text-sm px-4 py-3 w-full  !mt-6"
               >
-                ENVOYER
+                                {t('contact.form.send')}
+
               </button>
             </form>
           </div>

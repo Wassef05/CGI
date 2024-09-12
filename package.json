@@ -13,8 +13,10 @@
     "@emailjs/browser": "^4.4.1",
     "flowbite": "^2.4.1",
     "flowbite-react": "^0.10.1",
+    "i18next": "^23.15.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-i18next": "^15.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

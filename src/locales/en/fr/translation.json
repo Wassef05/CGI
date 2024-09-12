@@ -1,0 +1,51 @@
+{
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "contact": "Contact"
+    },
+
+
+    "apropos": {
+        "title": "à propos",
+        "paragraph1": "COGEB International CGI est une société à responsabilité limitée totalement exportatrice non résidente créée en 2002 conformément à la loi n° 94-42 du 07/03/1994 telle que modifiée et complétée par la loi n° 96-59 du 06/07/1996 et la loi n° 98-102 du 30/11/1998.",
+        "paragraph2": "Au capital de 250 milles dinars, COGEB International est spécialisée dans le domaine de négoce international soit l’exportation et l’importation de marchandises et produits ainsi que dans tout genre d’opérations de négoce international et de courtage."
+      },
+
+      "contact": {
+    "title": "contact",
+    "form": {
+      "name": "Nom et prénom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "project": "Projet",
+      "message": "Message",
+      "send": "Envoyer"
+    },
+    "info": {
+      "email": "cogebimmobiliere@gmail.com",
+      "phone": "+216 73 323 435",
+      "address": "Avenue de l’environnement, Sousse,<br/>Tunisia, 4000"
+    }
+}
+,
+
+    "footer": {
+      "aboutUs": "À Propos De Nous",
+      "contact": "Contact",
+      "cogeb": "COGEB",
+      "alBarka": "AL-BARKA",
+      "soprodi": "SOPRODI",
+      "cogebInternational": "COGEB INTERNATIONAL",
+      "contactTitle": "CONTACT",
+      "email": "cogebimmobiliere@gmail.com",
+      "phone": "+216 73 323 435",
+      "address": "Avenue de l'environnement, Sousse, Tunisie, 4000",
+      "rightsReserved": "Tous droits réservés.",
+      "developedBy": "Développé par SilverLine Solution"
+    }
+  
+  
+  }
+
+  
