@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
   const form = useRef();
-  const { t } = useTranslation(); // Use the translation hook
+  const { t } = useTranslation(); 
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -22,18 +22,18 @@ export default function Contact() {
   };
 
   return (
-    <div id="contact" className="relative">
-      <h1 className="uppercase pt-16 pl-16 font-averia font-bold text-5xl text-[#A95834]">
+    <div id="contact" className="relative pt-20 sm:pt-10">
+      <h1 className="uppercase text-center sm:text-left pt-8 px-6 sm:pl-16 font-averia font-bold text-4xl sm:text-5xl text-[#A95834]">
         {t('contact.title')}
       </h1>
-      <div className="relative mt-16 w-full bg-white">
+      <div className="relative mt-10 sm:mt-16 w-full bg-white">
         <div
           style={{ backgroundImage: `url(${cov})` }}
           className="absolute bottom-0 w-full h-full bg-cover bg-center bg-no-repeat"
         ></div>
-        <div className="relative max-w-screen mx-auto p-6 md:grid md:grid-cols-2 md:gap-6 z-10">
-        <div className="bg-[#3C3C3C] rounded-r-3xl p-6 px-8 text-white md:my-auto max-w-md" style={{marginLeft:"-25px"}} >
-        <div className="flex items-center mb-4">
+        <div className="relative max-w-screen mx-auto p-6  md:grid md:grid-cols-2 md:gap-6 z-10">
+          <div className="bg-[#3C3C3C]/80 rounded-r-3xl p-6 px-6  sm:px-8 text-white md:my-auto max-w-md mx-auto sm:ml-0" style={{ marginLeft: "-24px" }}>
+            <div className="flex items-center mb-4">
               <div className="mr-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
@@ -65,11 +65,12 @@ export default function Contact() {
               </div>
             </div>
           </div>
-          <div className="bg-white/70 rounded-l-xl p-6 text-[#3B4862] md:pr-12 py-10">
+
+          <div className="bg-white/70 rounded-xl p-6 sm:p-8 text-[#3B4862] md:pr-12 py-10">
             <form className="space-y-4" ref={form} onSubmit={sendEmail}>
               <div className="grid gap-6 mb-6 md:grid-cols-2">
                 <div>
-                  <label className="block mb-2 text-xl font-medium text-black">
+                  <label className="block mb-2 text-lg sm:text-xl font-medium text-black">
                     {t('contact.form.name')}
                   </label>
                   <input
@@ -80,7 +81,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="block mb-2 text-xl font-medium text-black">
+                  <label className="block mb-2 text-lg sm:text-xl font-medium text-black">
                     {t('contact.form.email')}
                   </label>
                   <input
@@ -91,7 +92,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="block mb-2 text-xl font-medium text-black">
+                  <label className="block mb-2 text-lg sm:text-xl font-medium text-black">
                     {t('contact.form.phone')}
                   </label>
                   <input
@@ -102,7 +103,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label className="block mb-2 text-xl font-medium text-black">
+                  <label className="block mb-2 text-lg sm:text-xl font-medium text-black">
                     {t('contact.form.project')}
                   </label>
                   <input
@@ -114,7 +115,7 @@ export default function Contact() {
                 </div>
               </div>
               <div>
-                <label className="block mb-2 text-xl font-medium text-black">
+                <label className="block mb-2 text-lg sm:text-xl font-medium text-black">
                   {t('contact.form.message')}
                 </label>
                 <textarea
@@ -126,7 +127,7 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                className="text-white bg-[#176a82e8] hover:bg-blue-600 tracking-wide rounded-md text-xl px-4 py-3 w-full mt-6"
+                className="text-white bg-[#176a82e8] hover:bg-blue-600 tracking-wide rounded-md text-lg sm:text-xl px-4 py-3 w-full mt-6"
               >
                 {t('contact.form.send')}
               </button>
