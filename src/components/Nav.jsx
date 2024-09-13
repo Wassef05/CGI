@@ -39,7 +39,7 @@ export default function Nav() {
 
   return (
     <nav className={`fixed w-full z-10 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
-      <div className="flex items-center justify-between px-4 py-6 sm:px-6">
+      <div className="flex items-center justify-between px-4 py-4 sm:px-6">
         <div className="flex items-center">
           <img
             src={logo}
