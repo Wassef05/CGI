@@ -8,8 +8,8 @@ export default function Nav() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
   const [logoVisible, setLogoVisible] = useState(true);
-  const [langMenuOpen, setLangMenuOpen] = useState(false); // State for the language menu
-  const langMenuRef = useRef(null); // Reference for the language menu
+  const [langMenuOpen, setLangMenuOpen] = useState(false);
+  const langMenuRef = useRef(null);
 
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
@@ -34,9 +34,9 @@ export default function Nav() {
   const toggleLanguage = (lang) => {
     i18n.changeLanguage(lang);
     setLangMenuOpen(false); // Close the language menu after selecting a language
+    setIsOpen(false); // Close the mobile menu after language change
   };
 
-  // Close the language menu if clicking outside of it
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (langMenuRef.current && !langMenuRef.current.contains(event.target)) {
@@ -92,7 +92,6 @@ export default function Nav() {
                   onClick={() => toggleLanguage('fr')}
                   className="flex items-center w-full px-4 py-2 text-left hover:bg-gray-100"
                 >
-                  {/* French flag SVG */}
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg"
                     alt="French flag"
@@ -104,7 +103,6 @@ export default function Nav() {
                   onClick={() => toggleLanguage('en')}
                   className="flex items-center w-full px-4 py-2 text-left hover:bg-gray-100"
                 >
-                  {/* English flag SVG */}
                   <img
                     src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
                     alt="English flag"
