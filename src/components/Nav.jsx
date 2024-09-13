@@ -37,18 +37,18 @@ export default function Nav() {
     setIsOpen(false); // Close the mobile menu after language change
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (langMenuRef.current && !langMenuRef.current.contains(event.target)) {
-        setLangMenuOpen(false); // Close menu if click is outside
-      }
-    };
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (langMenuRef.current && !langMenuRef.current.contains(event.target)) {
+  //       setLangMenuOpen(false); // Close menu if click is outside
+  //     }
+  //   };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
+  //   document.addEventListener('mousedown', handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener('mousedown', handleClickOutside);
+  //   };
+  // }, []);
 
   return (
     <nav className={`fixed w-full z-10 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
