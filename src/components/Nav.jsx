@@ -33,37 +33,22 @@ export default function Nav() {
 
   const toggleLanguage = (lang) => {
     i18n.changeLanguage(lang);
-    setLangMenuOpen(false); // Close the language menu after selecting a language
-    setIsOpen(false); // Close the mobile menu after language change
+    setLangMenuOpen(false);
+    setIsOpen(false);
   };
-
-  // useEffect(() => {
-  //   const handleClickOutside = (event) => {
-  //     if (langMenuRef.current && !langMenuRef.current.contains(event.target)) {
-  //       setLangMenuOpen(false); // Close menu if click is outside
-  //     }
-  //   };
-
-  //   document.addEventListener('mousedown', handleClickOutside);
-  //   return () => {
-  //     document.removeEventListener('mousedown', handleClickOutside);
-  //   };
-  // }, []);
 
   return (
     <nav className={`fixed w-full z-10 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
-      <div className="flex items-center justify-between px-4 py-4 sm:px-6">
+      <div className="flex items-center justify-between px-4 py-6 sm:px-6">
         <div className="flex items-center">
           <img
             src={logo}
-            className={`mr-3 absolute px-5 mt-6 h-16 sm:h-28 transition-opacity duration-300 ${logoVisible ? 'opacity-100' : 'opacity-0'}`}
+            className={`mr-3 absolute px-5 mt-8 h-24 sm:h-28 transition-opacity duration-300 ${logoVisible ? 'opacity-100' : 'opacity-0'}`}
             alt="Logo"
           />
         </div>
 
-        {/* Responsive menu (mobile) */}
         <div className="flex items-center space-x-4 sm:hidden">
-          {/* Language Icon */}
           <div className="relative" ref={langMenuRef}>
             <button
               onClick={() => setLangMenuOpen(!langMenuOpen)}
@@ -75,7 +60,7 @@ export default function Nav() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="h-6 w-6"
+                className="h-8 w-8" // Taille de l'icône de langue augmentée
               >
                 <path
                   strokeLinecap="round"
@@ -85,7 +70,6 @@ export default function Nav() {
               </svg>
             </button>
 
-            {/* Language menu dropdown */}
             {langMenuOpen && (
               <div className="absolute right-0 mt-2 w-32 bg-white shadow-lg rounded-md z-20">
                 <button
@@ -95,7 +79,7 @@ export default function Nav() {
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg"
                     alt="French flag"
-                    className="w-5 h-5 mr-2"
+                    className="w-6 h-6 mr-2" // Taille de l'image du drapeau augmentée
                   />
                   FR
                 </button>
@@ -106,7 +90,7 @@ export default function Nav() {
                   <img
                     src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
                     alt="English flag"
-                    className="w-5 h-5 mr-2"
+                    className="w-6 h-6 mr-2" // Taille de l'image du drapeau augmentée
                   />
                   EN
                 </button>
@@ -118,7 +102,7 @@ export default function Nav() {
             onClick={() => setIsOpen(!isOpen)}
             className="text-gray-800 hover:text-gray-600 focus:outline-none"
           >
-            <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+            <svg className="h-8 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -130,12 +114,12 @@ export default function Nav() {
         </div>
 
         {/* Desktop menu */}
-        <div className="hidden py-2 sm:flex sm:items-center space-x-8">
+        <div className="hidden py-4 sm:flex sm:items-center space-x-8">
           {['home', 'about', 'contact'].map((section) => (
             <button
               key={section}
               onClick={() => scrollToSection(section)}
-              className="text-[#1E1E1E] px-6 py-2 rounded-md text-lg font-averia font-extrabold transition duration-300 hover:text-blue-500 hover:bg-white/50"
+              className="text-[#1E1E1E] px-8 py-2 rounded-md text-2xl font-averia font-extrabold transition duration-300 hover:text-blue-500 hover:bg-white/50" // Taille des items augmentée
             >
               {t(`nav.${section}`)}
             </button>
@@ -153,7 +137,7 @@ export default function Nav() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="h-6 w-6 ml-10 cursor-pointer hover:text-blue-600"
+                className="h-8 w-8 ml-10 cursor-pointer hover:text-blue-600" // Taille de l'icône de langue augmentée
               >
                 <path
                   strokeLinecap="round"
@@ -172,7 +156,7 @@ export default function Nav() {
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg"
                     alt="French flag"
-                    className="w-5 h-5 mr-2"
+                    className="w-6 h-6 mr-2" // Taille de l'image du drapeau augmentée
                   />
                   FR
                 </button>
@@ -183,7 +167,7 @@ export default function Nav() {
                   <img
                     src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
                     alt="English flag"
-                    className="w-5 h-5 mr-2"
+                    className="w-6 h-6 mr-2" // Taille de l'image du drapeau augmentée
                   />
                   EN
                 </button>
@@ -199,7 +183,7 @@ export default function Nav() {
           <button
             key={section}
             onClick={() => scrollToSection(section)}
-            className="block w-full text-[#1E1E1E] px-4 py-2 text-lg font-averia font-extrabold hover:bg-gray-100"
+            className="block w-full text-[#1E1E1E] px-4 py-2 text-xl font-averia font-extrabold hover:bg-gray-100" // Taille des items augmentée
           >
             {t(`nav.${section}`)}
           </button>
