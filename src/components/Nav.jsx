@@ -41,11 +41,11 @@ export default function Nav() {
     <nav className={`fixed w-full z-10 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="flex items-center justify-between px-4 py-4 sm:px-6">
         <div className="flex items-center">
-          <img
-            src={logo}
-            className={`mr-3 absolute px-5 mt-8 h-24 sm:h-28 transition-opacity duration-300 ${logoVisible ? 'opacity-100' : 'opacity-0'}`}
-            alt="Logo"
-          />
+        <img
+  src={logo}
+  className={`mr-3 absolute px-7 mt-4 h-20 sm:h-24 md:h-28 transition-opacity duration-300 ${logoVisible ? 'opacity-100' : 'opacity-0'}`}
+  alt="Logo"
+/>
         </div>
 
         <div className="flex items-center space-x-4 sm:hidden">
