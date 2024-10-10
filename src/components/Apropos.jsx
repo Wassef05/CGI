@@ -15,7 +15,7 @@ export default function Apropos() {
         }}
         className="bg-cover h-full -z-20"
       >
-        <h1 className="uppercase pt-16 pl-16 font-averia font-bold text-5xl text-[#A95834] text-center sm:text-left">
+        <h1 className="uppercase pt-16 pl-16 font-averia font-bold text-5xl text-[#A95834]">
           {t('apropos.title')} {/* Traduction dynamique du titre */}
         </h1>
         

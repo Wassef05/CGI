@@ -1,0 +1,27 @@
+/* --- IMAGE DE COUVERTURE (desktop) --- */
+.bg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* Styles pour les petits écrans (mobile) */
+  @media (max-width: 640px) {
+    .bg {
+      background-size: contain; /* Ajuste l'image pour qu'elle ne soit pas trop zoomée sur mobile */
+      background-position: top center; /* Réajustement du positionnement */
+      height: auto; /* Pour que l'image ne prenne pas 100% de la hauteur sur mobile */
+      min-height: 60vh; /* Assure une hauteur minimale raisonnable */
+    }
+  }
+  
+  /* Styles pour les tablettes */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .bg {
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+  
