@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import logo from "../img/footerlogo.png";
+import {footerlogo} from "../img";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -14,7 +14,7 @@ export default function Footer() {
             
             {/* Logo du footer */}
             <div className="flex items-center justify-center md:justify-start">
-              <img className="sm:ml-12 max-w-[200px]" src={logo} alt="Footer Logo" />
+              <img className="sm:ml-12 max-w-[200px]" src={footerlogo} alt="Footer Logo" />
             </div>
             
             {/* Liens à propos/contact */}

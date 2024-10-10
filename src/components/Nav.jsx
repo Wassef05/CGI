@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import logo from "../img/logo1.png";
+import {logo1} from "../img";
 import { useTranslation } from 'react-i18next';
 
 export default function Nav() {
@@ -42,7 +42,7 @@ export default function Nav() {
       <div className="flex items-center justify-between px-4 py-4 sm:px-6">
         <div className="flex items-center">
         <img
-  src={logo}
+  src={logo1}
   className={`mr-3 absolute px-7 mt-4 h-20 sm:h-24 md:h-28 transition-opacity duration-300 ${logoVisible ? 'opacity-100' : 'opacity-0'}`}
   alt="Logo"
 />

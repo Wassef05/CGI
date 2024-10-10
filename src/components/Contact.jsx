@@ -1,5 +1,5 @@
-import covSmall from "../img/contactcov_mobile.png"; // Image pour mobile
-import covLarge from "../img/contactcov.png"; // Image pour desktop
+import {contactcov_mobile} from "../img"; 
+import {contactcov} from "../img"; 
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next';
@@ -32,10 +32,10 @@ export default function Contact() {
         
         {/* Utilisation de <picture> pour une image responsive */}
         <picture>
-          <source media="(max-width: 640px)" srcSet={covSmall} />
-          <source media="(min-width: 641px)" srcSet={covLarge} />
+          <source media="(max-width: 640px)" srcSet={contactcov_mobile} />
+          <source media="(min-width: 641px)" srcSet={contactcov} />
           <img
-            src={covLarge} // Fallback image
+            src={contactcov} // Fallback image
             alt="Image de couverture pour la section contact"
             className="absolute bottom-0 w-full h-full object-cover bg-no-repeat bg-center"
             loading="lazy"

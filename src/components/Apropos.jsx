@@ -1,4 +1,4 @@
-import cov from "../img/aprop.png";
+import { aprop } from "../img";
 import { useTranslation } from 'react-i18next';
 
 export default function Apropos() {
@@ -8,7 +8,7 @@ export default function Apropos() {
     <div id="about" className="relative max-w-screen sm:h-[97vh]">
       <div
         style={{
-          backgroundImage: `url(${cov})`,
+          backgroundImage: `url(${aprop})`,
           backgroundSize: 'contain',
           backgroundPosition: 'left bottom',
           backgroundRepeat: 'no-repeat'
