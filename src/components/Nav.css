@@ -1,0 +1,31 @@
+/* Styles par défaut pour la version mobile */
+@media (max-width: 640px) {
+    nav {
+      background-color: rgba(255, 255, 255, 0.086); /* Couleur de fond blanc translucide avec flou par défaut */
+      backdrop-filter: blur(10px); /* Applique l'effet de flou */
+      transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+      height: 100px;
+    }
+  
+    /* Lorsque l'utilisateur défile vers le bas */
+    nav.scrolled {
+      background-color: rgba(255, 255, 255, 0); /* Fond transparent lorsque l'utilisateur scrolle */
+      backdrop-filter: none; /* Retrait de l'effet de flou */
+    }
+  
+   
+  }
+/* Nav.css */
+.mobile-icon {
+    color: white; /* Couleur par défaut (blanc) */
+  }
+  
+  .mobile-icon.scrolled {
+    color: black; /* Couleur après le scroll */
+  }
+  
+  nav img {
+    transition: all 0.3s ease-in-out;
+    
+  }
+  

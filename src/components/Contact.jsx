@@ -1,5 +1,4 @@
-import {contactcov_mobile} from "../img"; 
-import {contactcov} from "../img"; 
+import { inter, contactcov } from "../img"; 
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next';
@@ -24,23 +23,27 @@ export default function Contact() {
 
   return (
     <div id="contact" className="relative pt-20 sm:pt-10 max-w-screen">
-      <h1 className="uppercase pt-16 pl-16 font-averia font-bold text-5xl text-[#A95834] text-center sm:text-left">
+      <h1 className="uppercase pt-16 pl-16 font-averia font-bold text-5xl text-[#A95834]">
         {t('contact.title')}
       </h1>
 
       <div className="relative mt-10 sm:mt-16 w-full bg-white">
-        
+
         {/* Utilisation de <picture> pour une image responsive */}
-        <picture>
-          <source media="(max-width: 640px)" srcSet={contactcov_mobile} />
-          <source media="(min-width: 641px)" srcSet={contactcov} />
+        <div className="absolute inset-0">
           <img
-            src={contactcov} // Fallback image
+            src={contactcov} // Image pour desktop/tablette
             alt="Image de couverture pour la section contact"
-            className="absolute bottom-0 w-full h-full object-cover bg-no-repeat bg-center"
+            className="hidden md:block w-full h-full object-cover"
             loading="lazy"
           />
-        </picture>
+          <img
+            src={inter} // Image pour mobile
+            alt="Image de couverture pour la section contact"
+            className="block md:hidden w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
 
         <div className="relative max-w-screen mx-auto p-6 md:grid md:grid-cols-2 md:gap-12 z-10">
           {/* Section Infos Contact */}

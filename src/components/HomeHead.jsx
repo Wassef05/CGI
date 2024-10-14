@@ -1,6 +1,6 @@
 
 import React from "react";
-import {zzzz} from "../img"; 
+import {cgicov} from "../img"; 
 import {headerbg} from "../img";
 import "./HomeHead.css";
 
@@ -9,7 +9,7 @@ export default function HomeHead() {
     <section id="accueil" name="accueil">
       
       <picture>
-        <source media="(max-width: 640px)" srcSet={zzzz} />
+        <source media="(max-width: 640px)" srcSet={cgicov} />
         <source media="(min-width: 641px)" srcSet={headerbg} />
         <img
           src={headerbg} 
