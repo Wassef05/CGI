@@ -1,12 +1,11 @@
-
 import React from "react";
-import {cgicov} from "../img"; 
-import {headerbg} from "../img";
+import {cgicov, headerbg} from "../img"; 
+import { down } from "../img"; // Importation de l'icône 'down'
 import "./HomeHead.css";
 
 export default function HomeHead() {
   return (
-    <section id="accueil" name="accueil">
+    <section id="accueil" name="accueil" className="relative">
       
       <picture>
         <source media="(max-width: 640px)" srcSet={cgicov} />
@@ -18,6 +17,20 @@ export default function HomeHead() {
           loading="lazy"
         />
       </picture>
+
+      {/* Titre et flèche vers le bas */}
+      <div className="arrow-down-container text-center">
+        <h2 className="text-white text-lg md:text-2xl mb-2 animate-pulse">
+          Découvrez plus
+        </h2>
+        {/* Utilisation de l'icône 'down' importée */}
+        <img
+          src={down} // Votre icône personnalisée importée
+          alt="Flèche vers le bas"
+          className="h-20 w-20 arrow-down mx-auto"
+        />
+      </div>
+
     </section>
   );
 }

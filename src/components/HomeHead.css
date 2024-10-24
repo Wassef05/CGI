@@ -1,27 +1,67 @@
 /* --- IMAGE DE COUVERTURE (desktop) --- */
 .bg {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-  }
-  
-  /* Styles pour les petits écrans (mobile) */
-  @media (max-width: 640px) {
-    .bg {
-      background-size: contain; /* Ajuste l'image pour qu'elle ne soit pas trop zoomée sur mobile */
-      background-position: top center; /* Réajustement du positionnement */
-      height: auto; /* Pour que l'image ne prenne pas 100% de la hauteur sur mobile */
-      min-height: 60vh; /* Assure une hauteur minimale raisonnable */
-    }
-  }
-  
-  /* Styles pour les tablettes */
-  @media (min-width: 641px) and (max-width: 1024px) {
-    .bg {
-      background-size: cover;
-      background-position: center center;
-    }
-  }
-  
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+/* Container pour la flèche et le texte */
+.arrow-down-container {
+  position: absolute;
+  left: 50%;
+  bottom: 20px; /* Décalage par rapport au bas de l'écran */
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* Style du texte */
+.arrow-down-container h2 {
+  font-family: 'Playfair Display', serif;
+  animation: fade-in 2s ease-in-out infinite alternate; /* Animation de texte */
+  color: #ffffff;
+}
+
+/* Style de la flèche */
+.arrow-down {
+  animation: bounce 1.5s infinite; /* Animation de rebond */
+}
+
+/* Animation de rebond */
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+  transform: translateY(0);
+}
+40% {
+  transform: translateY(10px);
+}
+60% {
+  transform: translateY(5px);
+}
+}
+
+/* Animation du texte */
+@keyframes fade-in {
+from {
+  opacity: 0.3;
+}
+to {
+  opacity: 1;
+}
+}
+
+/* Ajustements pour les petits écrans (mobile) */
+@media (max-width: 640px) {
+.bg {
+  background-size: contain;
+  background-position: top center;
+  height: auto;
+  min-height: 60vh;
+}
+.arrow-down {
+  height: 8px;
+  width: 8px;
+}
+}
